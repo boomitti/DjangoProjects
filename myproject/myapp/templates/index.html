@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>This is homepage</title>
+{% endblock %}
+
+
+{% block content %}
+    {{all_person}}
+    <table class="table table-responsive table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in all_person %}
+                <tr>
+                    <td>{{ person.id }}</td>
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.age }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
